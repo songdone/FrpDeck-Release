@@ -17,6 +17,8 @@
 | 完整部署手册 | [中文 PDF，8 页](https://github.com/songdone/FrpDeck-Release/releases/download/v1.5.2/FrpDeck-1.5.2-Deployment-Guide-zh-CN.pdf) | 覆盖 VPS/frps、Lucky、域名、NAS、非标准端口与 IPv6 |
 | 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.5.2/SHA256SUMS.txt) | 下载后核对文件完整性 |
 
+GitHub 自动生成的 `Source code` ZIP/TAR 归档本发布仓库中的文档、图片和许可文件。安装请使用上表中的 FPK 或 Compose 配置。
+
 Docker 镜像提供 `linux/amd64`、`linux/arm64`、`linux/arm/v7`。amd64、arm64 已拉回执行版本检查，其中 amd64 为模拟运行；arm/v7 尚未做运行验收。镜像架构声明不代表每种 NAS 或 fnOS 真机均已测试。
 
 用户自行准备 Docker、VPS/frps、域名、网络和 Lucky。已有公网条件的用户可按教程使用 NAS 上的 Lucky 直接访问。FrpDeck 不包含 Lucky，也不提供 VPS、域名或流量套餐。
