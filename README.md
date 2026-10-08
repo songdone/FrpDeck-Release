@@ -1,6 +1,6 @@
 # FrpDeck
 
-**NAS 多线路 frp 隧道管理面板。** 集中管理多台 VPS 的线路与 NAS 服务，联动 Lucky 配置 HTTPS 域名，查看连接状态、流量和线路诊断。
+**本应用含付费功能，收费与飞牛官方无关。NAS 多线路 frp 隧道管理面板。** 集中管理多台 VPS 的线路与 NAS 服务，联动 Lucky 配置 HTTPS 域名，查看连接状态、流量和线路诊断。
 
 本仓库用于发布安装包、部署教程、更新说明和收集反馈，不包含 FrpDeck 应用源码。
 
@@ -8,14 +8,14 @@
 
 ## 下载与环境
 
-当前版本：**1.6.0**，内置 frpc **0.64.0**。
+当前版本：**1.6.1**，内置 frpc **0.64.0**。
 
 | 部署方式 | 下载或镜像 | 状态 |
 |---|---|---|
-| Docker / Compose | `666uos/frpdeck:1.6.0`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.0/docker-compose-1.6.0.yaml) | 常规部署方式；适用于具备 Docker 的 NAS / Linux 主机 |
-| 飞牛 fnOS 手动安装 | [FrpDeck-1.6.0-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.0/FrpDeck-1.6.0-fnos.fpk) | **测试包，尚未通过官方应用中心审核**；实际验证范围见发布说明；完整生命周期验收仍待完成 |
-| 完整部署手册 | [中文 PDF，8 页](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.0/FrpDeck-getting-started-1.6.0.pdf) | 覆盖 VPS/frps、Lucky、域名、NAS、非标准端口与 IPv6 |
-| 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.0/SHA256SUMS.txt) | 下载后核对文件完整性 |
+| Docker / Compose | `666uos/frpdeck:1.6.1`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.1/docker-compose-1.6.1.yaml) | 常规部署方式；适用于具备 Docker 的 NAS / Linux 主机 |
+| 飞牛 fnOS 手动安装 | [FrpDeck-1.6.1-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.1/FrpDeck-1.6.1-fnos.fpk) | **测试包，尚未通过官方应用中心审核**；实际验证范围见发布说明；完整生命周期验收仍待完成 |
+| 完整部署手册 | [中文 PDF，9 页](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.1/FrpDeck-getting-started-1.6.1.pdf) | 覆盖 VPS/frps、Lucky、域名、NAS、非标准端口与 IPv6 |
+| 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.1/SHA256SUMS.txt) | 下载后核对文件完整性 |
 
 GitHub 自动生成的 `Source code` ZIP/TAR 归档本发布仓库中的文档、图片和许可文件。安装请使用上表中的 FPK 或 Compose 配置。
 
@@ -54,11 +54,11 @@ Docker 镜像提供 `linux/amd64`、`linux/arm64`、`linux/arm/v7`。amd64 已�
 | Pro 专业版 | **¥8.8** | ¥18 | 1 台 NAS | 线路与服务不限 |
 | Family 家庭版 | **¥18** | ¥28 | 3 台 NAS | 线路与服务不限 |
 
-首发优惠截至 **2026-11-10 当日结束**。付费授权永久有效，包含后续版本更新，并在本机离线验证；VPS、域名等第三方费用由用户自行承担。专业版与家庭版功能相同，区别为设备数量。[许可协议](LICENSE) · [第三方组件说明](THIRD_PARTY_NOTICES.md) · [购买与售后](https://t.me/Play_6uos)
+当前显示首发价与正常售价，页面不设统一首发截止日期，不按日期自动切换价格。付费授权永久有效，包含后续版本更新，并在本机离线验证；VPS、域名等第三方费用由用户自行承担。专业版与家庭版功能相同，区别为设备数量。[许可协议](LICENSE) · [第三方组件说明](THIRD_PARTY_NOTICES.md) · [购买与售后](https://t.me/Play_6uos)
 
 ## FD2 授权与活动
 
-1.6.0 统一使用 FD2，拒绝旧 FD1 和仅安装编号的兼容码。永久码在本机离线校验；FDV 活动资格码需在 FrpDeck 授权页规定日期内首次联网兑换，未兑换资格到期失效，成功兑换后的永久授权继续有效。当前活动关闭，发布时间不代表限免已经开始。
+1.6.1 统一使用 FD2，拒绝旧 FD1 和仅安装编号的兼容码。永久码在本机离线校验；FDV 活动资格码需在 FrpDeck 授权页规定日期内首次联网兑换，未兑换资格到期失效，成功兑换后的永久授权继续有效。当前活动关闭，发布时间不代表限免已经开始。
 
 后台按 Docker 引擎记录全站活动授权，清空应用数据、更换安装编号不会再次取得一份活动授权。保留原数据及同一引擎的正常升级可继续使用；机器码变化请恢复备份或联系作者审核。软件标识不能证明物理设备或真实个人唯一，已下发的离线永久码不能远程撤销。
 
@@ -78,4 +78,18 @@ Docker 镜像提供 `linux/amd64`、`linux/arm64`、`linux/arm/v7`。amd64 已�
 
 FrpDeck 与 frp、Lucky 官方无隶属关系。飞牛测试 FPK 为开发者提供的手动安装包，官方应用中心上架状态以飞牛公布为准。
 
-当前 FPK 尚需核对或整改飞牛正式申请表的非 root 权限和付费内容体验期要求；自有鉴权、可运行的镜像及包级 package 用户声明不等于已满足全部上架要求。
+当前 FPK 尚需核对或整改飞牛正式申请表的非 root 权限要求；自有鉴权、可运行的镜像及包级 package 用户声明不等于已满足全部上架要求。
+
+## 飞牛 FPK 专属 60 天完整体验
+
+通过飞牛 FPK 安装并完成管理员设置后，软件自动连接授权服务申请完整专业版体验，第一次成功联网签发起计时 60 天。授权页显示剩余天数和本机到期时间；网络不可用时先保持基础版，可重试。普通 Docker 镜像 `666uos/frpdeck:1.6.1` 不自动申请体验。
+
+到期自动恢复基础版，可管理最早添加的一条线路，服务不限。多线路修改、容器发现、端口修复和旧 frpc 迁移需永久授权。配置不删除，已有线路与服务继续运行；永久 FD2 授权优先，不受体验到期影响。
+
+相同 Docker 引擎和原 data 恢复原体验及到期时间，重装不会重新赠送 60 天；清空 data 后需恢复原数据。保存完整 data 备份。引擎编号和公开 FPK 渠道标识不是不可伪造的硬件或官方安装证明。节日永久限免活动独立管理，当前保持关闭。
+
+当前 FPK 仍有容器 root 与完整 Docker socket 权限审核缺口，属于手动安装测试包，不能视为已获应用中心批准。
+
+FrpDeck 1.6.1 的 60 天体验界面示例：页面为当前版本，使用合成 API 数据展示体验状态，机器码与到期时间为示例，不作为真机证明。
+
+![FrpDeck 1.6.1 fnOS trial example](images/fnos-trial-1.6.1-example.png)
