@@ -1,6 +1,6 @@
-# FrpDeck 1.5.2 安装与更新
+# FrpDeck 1.6.0 安装与更新
 
-[网页完整教程](https://frpdeck.playsong.cn/guide.html) · [8 页 PDF](https://github.com/songdone/FrpDeck-Release/releases/download/v1.5.2/FrpDeck-1.5.2-Deployment-Guide-zh-CN.pdf)
+[网页完整教程](https://frpdeck.playsong.cn/guide.html) · [8 页 PDF](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.0/FrpDeck-getting-started-1.6.0.pdf)
 
 ## 一、先准备网络与服务
 
@@ -10,7 +10,7 @@
 
 ## 二、Docker Compose 安装
 
-1. 在 NAS 的持久存储中建立专用目录，例如 `frpdeck`，将发布页的 `docker-compose-1.5.2.yaml` 下载并重命名为 `docker-compose.yaml`。
+1. 在 NAS 的持久存储中建立专用目录，例如 `frpdeck`，将发布页的 `docker-compose-1.6.0.yaml` 下载并重命名为 `docker-compose.yaml`。
 2. 配置中的 `./data:/data` 会把数据存入当前专用目录。需要其他路径时，改成 NAS 上的实际持久目录，不要使用临时目录。
 3. 默认映射 `15566:5000`。15566 已占用时只修改冒号左侧宿主端口，并使用修改后的端口打开面板。
 4. 在该目录执行：
@@ -23,11 +23,11 @@ docker compose logs --tail 80 frpdeck
 
 首次日志中显示初始密码。也可在 NAS 上查看专用目录里的 `data/initial-password.txt`。打开 `http://NAS地址:15566`，输入初始密码并设置管理员账号与至少 8 位的新密码。首次设置成功后初始密码失效。
 
-随附配置使用 `666uos/frpdeck:1.5.2`。若 NAS 镜像源不可用，检查 NAS 的镜像源和网络设置；不要把陌生脚本或未经验证的镜像作为替代。
+随附配置使用 `666uos/frpdeck:1.6.0`。若 NAS 镜像源不可用，检查 NAS 的镜像源和网络设置；不要把陌生脚本或未经验证的镜像作为替代。
 
 ### Docker 权限
 
-容器默认以 root 运行，挂载 `/var/run/docker.sock:/var/run/docker.sock:ro`。此接口具备容器管理能力，`:ro` 不限制 Docker API 的停止、启动等操作。用于容器发现与旧 frpc 迁移；无需这些功能时可删除该挂载。数据目录应限制为维护者可访问。
+容器默认以 root 运行，挂载 `/var/run/docker.sock:/var/run/docker.sock:ro`。此接口具备容器管理能力，`:ro` 不限制 Docker API 的停止、启动等操作。用于容器发现与旧 frpc 迁移，也是 FD2 读取引擎编号的必要接口；长期仅使用基础版时可删除该挂载。数据目录应限制为维护者可访问。
 
 ### 添加线路与服务
 
@@ -38,16 +38,22 @@ docker compose logs --tail 80 frpdeck
 
 基础版可管理 1 条线路，服务数量不限。付费功能在授权页激活。购买与售后通过 [作者公开联系渠道](https://t.me/Play_6uos) 对接，不要把机器码或授权码发到公开 Issues。
 
+## FD2 与活动资格首次兑换
+
+在 FrpDeck 的“授权”页输入永久 FD2，可本地离线激活。输入 FDV 资格码时，需要首次联网兑换；也可主动点击“参加开放活动”。只有作者开启且符合窗口、总名额与固定资格期限时才会签发，当前所有活动关闭。
+
+兑换成功后 App 保存永久码，不因活动结束失效。相同安装与引擎可用原已兑换资格码重试找回；清空数据产生新安装编号不能再次领取，应恢复原数据或联系作者。1.6.0 不再兼容 FD1，开发者本人已迁移新码；持有旧码者应先联系作者再升级。
+
 ## 三、飞牛 fnOS 手动安装测试包
 
-`FrpDeck-1.5.2-fnos.fpk` 是**尚未通过官方应用中心审核的测试包**。当前版本在 fnOS 上的完整安装、业务、启停、升级、卸载与恢复流程仍待验收；已知旧 1.2.1 版本的 x86 fnOS 安装记录不能替代本版本测试。
+`FrpDeck-1.6.0-fnos.fpk` 是**尚未通过官方应用中心审核的测试包**。本版本的实际设备验证范围见发布说明，仍不代表所有架构与完整安装、业务、卸载、恢复流程均已验收。
 
 1. 确保飞牛 Docker 服务已安装且可用，先备份现有 FrpDeck 数据。
 2. 从本仓库 Releases 下载 FPK 及 `SHA256SUMS.txt`，核对校验值。
 3. 在飞牛应用中心的手动安装入口选择 FPK，查看权限说明后按提示安装。
 4. 默认入口为 `http://NAS地址:15566`。首次设置密码可从 `frpdeck-fnos` 容器日志或应用运行时数据目录的 `initial-password.txt` 获取。
 
-FPK 固定拉取 FrpDeck 1.5.2 镜像摘要，需要能访问对应镜像源。数据位于应用运行时目录的 `data` 子目录；升级前从面板导出备份，同时备份整个数据目录。平台卸载是否清理数据，以实际设备行为为准，不能假定卸载后授权和配置必然保留。
+FPK 固定拉取 FrpDeck 1.6.0 镜像摘要，需要能访问对应镜像源。数据位于应用运行时目录的 `data` 子目录；升级前从面板导出备份，同时备份整个数据目录。平台卸载是否清理数据，以实际设备行为为准，不能假定卸载后授权和配置必然保留。
 
 ## 四、升级与恢复
 
