@@ -8,13 +8,13 @@
 
 ## 下载
 
-当前版本：**1.6.3**，内置 frpc **0.64.0**。
+当前版本：**1.6.4**，内置 frpc **0.64.0**。
 
 | 部署方式 | 下载或镜像 | 说明 |
 |---|---|---|
-| Docker / Compose | `registry-1.docker.io/666uos/frpdeck:latest`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.3/docker-compose-1.6.3.yaml) | 适用于群晖、威联通、极空间、飞牛、绿联等带 Docker 的 NAS 和 Linux 主机 |
-| 飞牛 fnOS | 飞牛应用中心（内测中）；手动安装包 [FrpDeck-1.6.3-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.3/FrpDeck-1.6.3-fnos.fpk) | 从飞牛应用中心安装可免费体验专业版 60 天 |
-| 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.3/SHA256SUMS.txt) | 下载后核对文件完整性 |
+| Docker / Compose | `registry-1.docker.io/666uos/frpdeck:latest`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.4/docker-compose-1.6.4.yaml) | 适用于群晖、威联通、极空间、飞牛、绿联等带 Docker 的 NAS 和 Linux 主机 |
+| 飞牛 fnOS | 飞牛应用中心（内测中）；手动安装包 [FrpDeck-1.6.4-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.4/FrpDeck-1.6.4-fnos.fpk) | 从飞牛应用中心安装可免费体验专业版 60 天 |
+| 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.6.4/SHA256SUMS.txt) | 下载后核对文件完整性 |
 
 镜像支持 amd64、arm64、arm/v7 架构；amd64 和 arm64 已实际运行验证，arm/v7 尚未在实体设备上验证。
 
