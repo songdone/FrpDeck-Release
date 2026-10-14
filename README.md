@@ -8,17 +8,21 @@
 
 ## 下载
 
-当前版本：**1.7.1**，内置 frpc **0.64.0**。
+当前版本：**1.7.2**，内置 frpc **0.64.0**。
 
 | 部署方式 | 下载或镜像 | 说明 |
 |---|---|---|
-| Docker / Compose | `registry-1.docker.io/666uos/frpdeck:latest`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.1/docker-compose-1.7.1.yaml) | 适用于群晖、威联通、极空间、飞牛、绿联等带 Docker 的 NAS 和 Linux 主机 |
-| 飞牛 fnOS | 飞牛应用中心（内测中）；手动安装包 [FrpDeck-1.7.1-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.1/FrpDeck-1.7.1-fnos.fpk) | 从飞牛应用中心安装可免费体验专业版 60 天 |
-| 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.1/SHA256SUMS.txt) | 下载后核对文件完整性 |
+| Docker / Compose | `registry-1.docker.io/666uos/frpdeck:latest`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.2/docker-compose-1.7.2.yaml) | 适用于群晖、威联通、极空间、飞牛、绿联等带 Docker 的 NAS 和 Linux 主机 |
+| 飞牛 fnOS | 飞牛应用中心（内测中）；手动安装包 [FrpDeck-1.7.2-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.2/FrpDeck-1.7.2-fnos.fpk) | 从飞牛应用中心安装可免费体验专业版 60 天 |
+| 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.2/SHA256SUMS.txt) | 下载后核对文件完整性 |
 
 镜像支持 amd64、arm64、arm/v7 架构；amd64 和 arm64 已实际运行验证，arm/v7 尚未在实体设备上验证。
 
 需要自行准备 VPS（安装 frps）、域名和 Lucky；家里有可用的公网 IPv6 时，也可以只用 NAS 上的 Lucky，不经过 VPS。FrpDeck 不提供 VPS、域名或流量。
+
+## 1.7.2 升级提示
+
+本次新增可配置失败登录防护、来源 IP 与浏览器记录、有效会话及单独退出，以及可授权自动执行的 VPS 网页端口开关。首次升级后需重新登录；VPS 执行器和旧手动防火墙需单独迁移，默认保护 SSH、VPN 与 FRP 控制通道。[安全设置与迁移说明](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.2/security-and-firewall-1.7.2.md)。
 
 ## 安装
 
