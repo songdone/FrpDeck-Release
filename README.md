@@ -1,6 +1,6 @@
 # FrpDeck
 
-**本应用含付费功能，收费与飞牛官方无关。** FrpDeck 是 NAS 多线路 frp 隧道管理面板：集中管理多台 VPS 的线路与 NAS 服务，联动 Lucky 配置 HTTPS 域名，查看连接状态、流量和线路诊断。
+**本应用含付费功能，收费与飞牛官方无关。** FrpDeck 是 frp 内网穿透的图形化管理面板，为不熟悉配置文件的用户设计：在网页中添加云服务器线路和 NAS 上的应用，就能通过自己的域名从外网访问；自动同步 Lucky 域名与 HTTPS 证书，实时查看每条线路的流量与状态。
 
 本仓库用于发布安装包、更新说明和收集反馈，不包含应用源码。
 
@@ -28,13 +28,17 @@
 
 ## 界面
 
-以下截图来自 1.5.2 演示环境，数据为示例。
+![图形化面板](images/poster-01-panel.jpg)
 
-![总览](images/overview-1.5.2.png)
+![实时监控](images/poster-02-monitor.jpg)
 
-![服务管理](images/services-1.5.2.png)
+![流量去向](images/poster-03-traffic.jpg)
 
-<img src="images/mobile-services-1.5.2.png" alt="手机服务管理示例" width="300">
+![反代整合](images/poster-04-proxy.jpg)
+
+![稳定可靠](images/poster-05-stable.jpg)
+
+截图来自 FrpDeck 1.7 实际界面，数据为示例。
 
 ## 功能与价格
 
