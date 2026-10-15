@@ -13,8 +13,10 @@
 | 部署方式 | 下载或镜像 | 说明 |
 |---|---|---|
 | Docker / Compose | `registry-1.docker.io/666uos/frpdeck:latest`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.3/docker-compose-1.7.3.yaml) | 适用于群晖、威联通、极空间、飞牛、绿联等带 Docker 的 NAS 和 Linux 主机 |
-| 飞牛 fnOS | 飞牛应用中心（内测中）；手动安装包 [FrpDeck-1.7.3-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.3/FrpDeck-1.7.3-fnos.fpk) | 从飞牛应用中心安装可免费体验专业版 60 天 |
+| 飞牛 fnOS | 已正式上架飞牛应用中心；手动安装包 [FrpDeck-1.7.3-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.3/FrpDeck-1.7.3-fnos.fpk) | 从飞牛应用中心安装可免费体验专业版 60 天 |
 | 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.3/SHA256SUMS.txt) | 下载后核对文件完整性 |
+
+应用中心与 GitHub 的更新节奏可能不同，请以各渠道显示的版本为准。
 
 镜像支持 amd64、arm64、arm/v7 架构。三架构均已运行版本校验，普通版与 fnOS 版镜像已完成隔离容器验证；本轮未进行实体 NAS 安装验收。
 
