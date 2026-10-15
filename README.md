@@ -8,21 +8,21 @@
 
 ## 下载
 
-当前版本：**1.7.2**，内置 frpc **0.64.0**。
+当前版本：**1.7.3**，内置 frpc **0.64.0**。
 
 | 部署方式 | 下载或镜像 | 说明 |
 |---|---|---|
-| Docker / Compose | `registry-1.docker.io/666uos/frpdeck:latest`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.2/docker-compose-1.7.2.yaml) | 适用于群晖、威联通、极空间、飞牛、绿联等带 Docker 的 NAS 和 Linux 主机 |
-| 飞牛 fnOS | 飞牛应用中心（内测中）；手动安装包 [FrpDeck-1.7.2-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.2/FrpDeck-1.7.2-fnos.fpk) | 从飞牛应用中心安装可免费体验专业版 60 天 |
-| 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.2/SHA256SUMS.txt) | 下载后核对文件完整性 |
+| Docker / Compose | `registry-1.docker.io/666uos/frpdeck:latest`；[Compose 配置](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.3/docker-compose-1.7.3.yaml) | 适用于群晖、威联通、极空间、飞牛、绿联等带 Docker 的 NAS 和 Linux 主机 |
+| 飞牛 fnOS | 飞牛应用中心（内测中）；手动安装包 [FrpDeck-1.7.3-fnos.fpk](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.3/FrpDeck-1.7.3-fnos.fpk) | 从飞牛应用中心安装可免费体验专业版 60 天 |
+| 文件校验 | [SHA256SUMS.txt](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.3/SHA256SUMS.txt) | 下载后核对文件完整性 |
 
-镜像支持 amd64、arm64、arm/v7 架构；amd64 和 arm64 已实际运行验证，arm/v7 尚未在实体设备上验证。
+镜像支持 amd64、arm64、arm/v7 架构。三架构均已运行版本校验，普通版与 fnOS 版镜像已完成隔离容器验证；本轮未进行实体 NAS 安装验收。
 
 需要自行准备 VPS（安装 frps）、域名和 Lucky；家里有可用的公网 IPv6 时，也可以只用 NAS 上的 Lucky，不经过 VPS。FrpDeck 不提供 VPS、域名或流量。
 
-## 1.7.2 升级提示
+## 1.7.3 升级提示
 
-本次新增可配置失败登录防护、来源 IP 与浏览器记录、有效会话及单独退出，以及可授权自动执行的 VPS 网页端口开关。首次升级后需重新登录；VPS 执行器和旧手动防火墙需单独迁移，默认保护 SSH、VPN 与 FRP 控制通道。[安全设置与迁移说明](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.2/security-and-firewall-1.7.2.md)。
+新增可选轻简主题及独立动效开关，原三套主题、全部页面和多线路功能保留。SSH 等 TCP 管理端口默认允许直连，也可由用户手动限制；管理端口自动开关需同步升级服务器执行器。1.7.2 的会话和配置继续保留；更早的旧会话格式升级需重新登录。[安全设置与迁移说明](https://github.com/songdone/FrpDeck-Release/releases/download/v1.7.3/security-and-firewall-1.7.3.md)。
 
 ## 安装
 
@@ -31,6 +31,14 @@
 数据目录保存管理员、线路、服务和授权，升级和重建容器时请保留。
 
 ## 界面
+
+1.7.3 新增可选轻简主题，以下为实际界面与示例数据；原有主题继续保留。
+
+![1.7.3 轻简总览](images/minimal-overview-1.7.3.png)
+
+![1.7.3 轻简监控](images/minimal-monitor-1.7.3.png)
+
+以下功能海报保留此前 1.7 界面示例。
 
 ![图形化面板](images/poster-01-panel.jpg)
 
@@ -51,7 +59,7 @@
 - 流量与提醒：流量趋势、流量去向、额度与计费方式、到期提醒。
 - 消息推送（所有版本免费）：企业微信、钉钉、飞书、Server酱、Bark、Telegram 和通用 Webhook。
 - 专业版功能：多条线路一键切换、容器与 VPS 端口发现并一键加入反代、端口冲突一键修复、迁移旧的 frpc 容器。
-- 使用与安全：电脑和手机界面、可安装为应用、深浅主题、两步验证、登录限流、仅允许局域网访问。
+- 使用与安全：电脑和手机界面、可安装为应用、四套主题与深浅模式、独立动效开关、两步验证、可配置登录封禁、独立会话及单独退出、仅允许局域网访问。
 
 | 版本 | 首发价 | 正常售价 | 可激活的 NAS | 线路 / 服务 |
 |---|---|---|---|---|
