@@ -9,7 +9,7 @@ FrpDeck 是面向 NAS 的 frp 图形化管理面板。本仓库用于公开版�
 - [官网](https://frpdeck.playsong.cn/)
 - [问题反馈](https://github.com/songdone/FrpDeck-Release/issues)
 
-当前版本记录：**1.7.3**。
+当前版本记录：**1.7.5**。
 
 本应用含付费功能，收费与飞牛官方无关。基础版永久免费，专业版与家庭版的功能及授权说明以应用内授权页和官网为准。
 
